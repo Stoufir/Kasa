@@ -1,7 +1,8 @@
-import Banner from './Banner'
+import { RouterProvider } from "react-router-dom";
+import router from './router'
 
 function App() {
-  return <Banner/>
+  return <RouterProvider router={router}/>
 }
 
 export default App;

@@ -5,7 +5,10 @@ function Banner() {
     return (
         <header className='Banner'>
             <img src={Logo} alt="Kasa Logo"></img>
-            <nav className='navigation'>Accueil A Propos</nav>
+            <nav className='navigation'>
+                <button>Accueil</button>
+                <button>A Propos</button>
+                </nav>
         </header>
     )
 }
