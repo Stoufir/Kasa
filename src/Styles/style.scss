@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+$couleur-principale: #ff6060;
+
+body {
+    font-family: "Montserrat", sans-serif;
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    nav {
+        ul {
+            display: flex;
+            gap: 57px;
+        }
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            &.underline {
+                text-decoration: underline;
+                text-decoration-color: black;
+            }
+            li {
+                font-size: 20px;
+                cursor: pointer;
+                list-style: none;
+                color: black;
+            }
+        }
+    }
+}
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    height: 223px;
+    width: 100%;
+    margin: 25px 0;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            color: white;
+            font-size: 48px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-weight: 700;
+        }
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 324px);
+    gap: 30px;
+    padding: 30px;
+    border-radius: 25px;
+    justify-content: space-around;
+    background-color: #f6f6f6;
+    .thumb {
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        height: 324px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        h3 {
+            position: absolute;
+            bottom: 0;
+            left: 5%;
+            font-size: 1em;
+            color: white;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
+.footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 209px;
+    margin: 50px 0 0 0;
+    .logo {
+        width: 122px;
+        height: auto;
+    }
+    .rights {
+        font-size: 24px;
+        color: white;
+        text-align: center;
+    }
+}
+
+.error-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $couleur-principale;
+    .error {
+        font-weight: 700;
+        font-size: 288px;
+        margin: 0;
+    }
+    .message {
+        font-weight: 500;
+        font-size: 36px;
+    }
+    .home {
+        font-weight: 500;
+        font-size: 18px;
+        color: black;
+    }
+}
+
+.logement {
+    img {
+        height: 415px;
+        width: 1240px;
+        object-fit: cover;
+    }
+    .title {
+        font-size: 36px;
+        font-weight: 500;
+        color: $couleur-principale;
+    }
+    .location {
+        font-size: 18px;
+    }
+}
+
+.drop-down-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .accordion {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        .item {
+            width: 90%;
+            font-size: 22px;
+
+            .title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                background-color: $couleur-principale;
+                color: white;
+                height: 52px;
+                .toggle {
+                    cursor: pointer;
+                }
+                .rotate {
+                    transform: rotate(0deg);
+                    transition: transform .25s ease; /* Optionnel : ajoute une transition douce */
+                }
+                .rotate-neg {
+                    transform: rotate(180deg);
+                    transition: transform .25s ease; /* Optionnel : ajoute une transition douce */
+                }
+                
+                
+            }
+            .content {
+                transition: max-height .25s ease-out, padding .25s ease-out; /* Transition pour la hauteur max et le padding */
+                padding: 0 10px; /* Ajoutez du padding pour l'animation du contenu */
+                max-height: 0;
+                color: black;
+                background-color: #f6f6f6;
+                overflow: hidden;
+                
+            }
+            .content-show {
+                transition: max-height .25s ease-in, padding .25s ease-in; /* Transition pour la hauteur max et le padding */
+                overflow: auto;
+                max-height: 300px;
+                color: black;
+                background-color: #f6f6f6;
+                padding: 10px;
+                
+
+            }
+        }
+    }
+}
