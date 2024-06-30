@@ -132,40 +132,82 @@ body {
   color: black;
 }
 
-.logement img {
+.logement .logement-img {
   height: 415px;
   width: 1240px;
   object-fit: cover;
 }
-.logement .title {
+.logement .up-container {
+  display: flex;
+  justify-content: space-between;
+  color: #ff6060;
+  padding: 10px 0;
+}
+.logement .up-container .title-container .title {
   font-size: 36px;
   font-weight: 500;
+  margin: 15px 0 0 0;
+}
+.logement .up-container .title-container .location {
+  font-size: 18px;
+  margin: 10px 0 0 0;
+  color: black;
+}
+.logement .up-container .host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logement .up-container .host .name-container {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: right;
+}
+.logement .up-container .host .picture {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 64px;
+  height: 64px;
+}
+.logement .mid-container {
+  display: flex;
+  justify-content: space-between;
+}
+.logement .mid-container .rate-container .star {
+  font-size: 24px;
+  color: #E3E3E3;
+}
+.logement .mid-container .rate-container .star.full {
   color: #ff6060;
 }
-.logement .location {
-  font-size: 18px;
-}
-
-.drop-down-wrapper {
+.logement .mid-container .tag-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+  justify-content: space-between;
+  margin: 0 0 10px 0;
 }
-.drop-down-wrapper .accordion {
+.logement .mid-container .tag-container .tag {
+  background-color: #ff6060;
+  border-radius: 20px;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+.logement .bottom-container .drop-down-wrapper .accordion {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   gap: 30px;
 }
-.drop-down-wrapper .accordion .item {
+.logement .bottom-container .drop-down-wrapper .accordion .item {
   width: 90%;
   font-size: 22px;
 }
-.drop-down-wrapper .accordion .item .title {
+.logement .bottom-container .drop-down-wrapper .accordion .item .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -173,29 +215,80 @@ body {
   background-color: #ff6060;
   color: white;
   height: 52px;
+  border-radius: 10px;
 }
-.drop-down-wrapper .accordion .item .title .toggle {
+.logement .bottom-container .drop-down-wrapper .accordion .item .title .toggle {
   cursor: pointer;
 }
-.drop-down-wrapper .accordion .item .title .rotate {
+.logement .bottom-container .drop-down-wrapper .accordion .item .title .rotate {
   transform: rotate(0deg);
-  transition: transform 0.25s ease; /* Optionnel : ajoute une transition douce */
+  transition: transform 0.25s ease;
 }
-.drop-down-wrapper .accordion .item .title .rotate-neg {
+.logement .bottom-container .drop-down-wrapper .accordion .item .title .rotate-neg {
   transform: rotate(180deg);
-  transition: transform 0.25s ease; /* Optionnel : ajoute une transition douce */
+  transition: transform 0.25s ease;
 }
-.drop-down-wrapper .accordion .item .content {
-  transition: max-height 0.25s ease-out, padding 0.25s ease-out; /* Transition pour la hauteur max et le padding */
-  padding: 0 10px; /* Ajoutez du padding pour l'animation du contenu */
+.logement .bottom-container .drop-down-wrapper .accordion .item .content {
+  transition: max-height 0.25s ease-out, padding 0.25s ease-out;
+  padding: 0 10px;
   max-height: 0;
   color: black;
   background-color: #f6f6f6;
   overflow: hidden;
 }
-.drop-down-wrapper .accordion .item .content-show {
-  transition: max-height 0.25s ease-in, padding 0.25s ease-in; /* Transition pour la hauteur max et le padding */
+.logement .bottom-container .drop-down-wrapper .accordion .item .content-show {
+  transition: max-height 0.25s ease-in, padding 0.25s ease-in;
   overflow: auto;
+  max-height: 300px;
+  color: black;
+  background-color: #f6f6f6;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about .drop-down-wrapper .accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.about .drop-down-wrapper .accordion .item {
+  width: 90%;
+  font-size: 22px;
+}
+.about .drop-down-wrapper .accordion .item .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ff6060;
+  color: white;
+  height: 52px;
+  border-radius: 10px;
+}
+.about .drop-down-wrapper .accordion .item .title .toggle {
+  cursor: pointer;
+}
+.about .drop-down-wrapper .accordion .item .title .rotate {
+  transform: rotate(0deg);
+  transition: transform 0.25s ease;
+}
+.about .drop-down-wrapper .accordion .item .title .rotate-neg {
+  transform: rotate(180deg);
+  transition: transform 0.25s ease;
+}
+.about .drop-down-wrapper .accordion .item .content {
+  transition: max-height 0.25s ease-out, padding 0.25s ease-out;
+  padding: 0 10px;
+  max-height: 0;
+  color: black;
+  background-color: #f6f6f6;
+  overflow: hidden;
+}
+.about .drop-down-wrapper .accordion .item .content-show {
+  transition: max-height 0.25s ease-in, padding 0.25s ease-in;
   max-height: 300px;
   color: black;
   background-color: #f6f6f6;

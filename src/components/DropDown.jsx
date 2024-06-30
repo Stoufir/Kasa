@@ -28,7 +28,7 @@ const data = [
     }
 ]
 
-function DropDown() {
+function DropDown({data}) {
     const [openItems, setOpenItems] = useState([]);
 
     const toggle = (i) => {
