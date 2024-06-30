@@ -138,28 +138,146 @@ body {
 }
 
 .logement {
-    img {
+    .logement-img {
         height: 415px;
         width: 1240px;
         object-fit: cover;
     }
-    .title {
-        font-size: 36px;
-        font-weight: 500;
+    .up-container {
+        display: flex;
+        justify-content: space-between;
         color: $couleur-principale;
+        padding: 10px 0;
+        .title-container {
+            .title {
+                font-size: 36px;
+                font-weight: 500;
+                margin: 15px 0 0 0;
+            }
+            .location {
+                font-size: 18px;
+                margin: 10px 0 0 0;
+                color: black;
+            }
+        }
+        .host {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+            .name-container {
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                text-align: right;
+            }
+            .picture {
+                border-radius:50% ;
+                object-fit: cover;
+                width: 64px;
+                height: 64px;
+                
+            }
+        }
     }
-    .location {
-        font-size: 18px;
+    .mid-container {
+        display: flex;
+        justify-content: space-between;
+        .rate-container {           
+              .star {
+                font-size: 24px;
+                color:#E3E3E3;
+              }
+              
+              .star.full {
+                color : $couleur-principale;
+              }
+
+        }
+        .tag-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 10px 0;
+            .tag {
+                background-color: $couleur-principale;
+                border-radius: 20px;
+                color: white;
+                padding: 10px;
+                margin: 5px;
+                font-size: 14px;
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+        
     }
+    .bottom-container {
+        .drop-down-wrapper {
+
+            .accordion {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+        
+                .item {
+                    width: 90%;
+                    font-size: 22px;
+        
+                    .title {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 10px;
+                        background-color: $couleur-principale;
+                        color: white;
+                        height: 52px;
+                        border-radius: 10px;
+                        .toggle {
+                            cursor: pointer;
+                        }
+                        .rotate {
+                            transform: rotate(0deg);
+                            transition: transform 0.25s ease;
+                        }
+                        .rotate-neg {
+                            transform: rotate(180deg);
+                            transition: transform 0.25s ease;
+                        }
+                    }
+                    .content {
+                        transition:
+                            max-height 0.25s ease-out,
+                            padding 0.25s ease-out;
+                        padding: 0 10px;
+                        max-height: 0;
+                        color: black;
+                        background-color: #f6f6f6;
+                        overflow: hidden;
+                    }
+                    .content-show {
+                        transition:
+                            max-height 0.25s ease-in,
+                            padding 0.25s ease-in;
+                        overflow: auto;
+                        max-height: 300px;
+                        color: black;
+                        background-color: #f6f6f6;
+                        padding: 10px;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+
+
 }
 
-.drop-down-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+.about {
+    .drop-down-wrapper {
     .accordion {
         width: 100%;
         display: flex;
@@ -179,39 +297,39 @@ body {
                 background-color: $couleur-principale;
                 color: white;
                 height: 52px;
+                border-radius: 10px;
                 .toggle {
                     cursor: pointer;
                 }
                 .rotate {
                     transform: rotate(0deg);
-                    transition: transform .25s ease; /* Optionnel : ajoute une transition douce */
+                    transition: transform 0.25s ease;
                 }
                 .rotate-neg {
                     transform: rotate(180deg);
-                    transition: transform .25s ease; /* Optionnel : ajoute une transition douce */
+                    transition: transform 0.25s ease;
                 }
-                
-                
             }
             .content {
-                transition: max-height .25s ease-out, padding .25s ease-out; /* Transition pour la hauteur max et le padding */
-                padding: 0 10px; /* Ajoutez du padding pour l'animation du contenu */
+                transition:
+                    max-height 0.25s ease-out,
+                    padding 0.25s ease-out;
+                padding: 0 10px;
                 max-height: 0;
                 color: black;
                 background-color: #f6f6f6;
                 overflow: hidden;
-                
             }
             .content-show {
-                transition: max-height .25s ease-in, padding .25s ease-in; /* Transition pour la hauteur max et le padding */
-                overflow: auto;
+                transition:
+                    max-height 0.25s ease-in,
+                    padding 0.25s ease-in;
                 max-height: 300px;
                 color: black;
                 background-color: #f6f6f6;
                 padding: 10px;
-                
-
             }
         }
     }
+}
 }
