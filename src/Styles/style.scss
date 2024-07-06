@@ -138,10 +138,16 @@ body {
 }
 
 .logement {
-    .logement-img {
-        height: 415px;
-        width: 1240px;
-        object-fit: cover;
+    .carousel-root{
+        .logement-img {
+            height: 415px;
+            width: 1240px;
+            object-fit: cover;
+        }
+        .control-arrow {
+            color: red;
+            size: 100px;
+        }
     }
     .up-container {
         display: flex;
@@ -213,72 +219,23 @@ body {
         
     }
     .bottom-container {
-        .drop-down-wrapper {
-
-            .accordion {
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                gap: 30px;
-        
-                .item {
-                    width: 90%;
-                    font-size: 22px;
-        
-                    .title {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: 10px;
-                        background-color: $couleur-principale;
-                        color: white;
-                        height: 52px;
-                        border-radius: 10px;
-                        .toggle {
-                            cursor: pointer;
-                        }
-                        .rotate {
-                            transform: rotate(0deg);
-                            transition: transform 0.25s ease;
-                        }
-                        .rotate-neg {
-                            transform: rotate(180deg);
-                            transition: transform 0.25s ease;
-                        }
-                    }
-                    .content {
-                        transition:
-                            max-height 0.25s ease-out,
-                            padding 0.25s ease-out;
-                        padding: 0 10px;
-                        max-height: 0;
-                        color: black;
-                        background-color: #f6f6f6;
-                        overflow: hidden;
-                    }
-                    .content-show {
-                        transition:
-                            max-height 0.25s ease-in,
-                            padding 0.25s ease-in;
-                        overflow: auto;
-                        max-height: 300px;
-                        color: black;
-                        background-color: #f6f6f6;
-                        padding: 10px;
-                        display: flex;
-                        flex-direction: column;
-                    }
-                }
+        .collapsed {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            .item {
+                width: 50%;
             }
         }
+        
     }
 
 
 }
 
-.about {
-    .drop-down-wrapper {
-    .accordion {
+
+
+    .collapsed {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -327,9 +284,20 @@ body {
                 max-height: 300px;
                 color: black;
                 background-color: #f6f6f6;
-                padding: 10px;
+                padding: 20px;
+                
+                height: 100%;
+            }
+            ul {
+                list-style-type: none; 
+                margin: 0;
+                padding: 0;
+                
+            }
+            p {
+                margin: 0;
+                padding: 0;
             }
         }
     }
-}
-}
+

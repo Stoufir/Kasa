@@ -1,7 +1,5 @@
-import Header from './Header'
 import Banner from './Banner2'
-import DropDown from './DropDown'
-import Footer from './Footer'
+import DropDown from './Collapsed'
 
 const data = [
     { 
@@ -33,12 +31,10 @@ const data = [
 
 function About () {
     return (<div>
-        <Header/>
         <Banner/>
         <div className='about'>
         <DropDown data={data}/>
         </div>
-        <Footer/>
         </div>
     )
 }

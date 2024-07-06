@@ -132,10 +132,14 @@ body {
   color: black;
 }
 
-.logement .logement-img {
+.logement .carousel-root .logement-img {
   height: 415px;
   width: 1240px;
   object-fit: cover;
+}
+.logement .carousel-root .control-arrow {
+  color: red;
+  size: 100px;
 }
 .logement .up-container {
   display: flex;
@@ -197,68 +201,27 @@ body {
   font-weight: 700;
   text-align: center;
 }
-.logement .bottom-container .drop-down-wrapper .accordion {
-  width: 100%;
+.logement .bottom-container .collapsed {
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  align-items: start;
 }
-.logement .bottom-container .drop-down-wrapper .accordion .item {
-  width: 90%;
-  font-size: 22px;
-}
-.logement .bottom-container .drop-down-wrapper .accordion .item .title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #ff6060;
-  color: white;
-  height: 52px;
-  border-radius: 10px;
-}
-.logement .bottom-container .drop-down-wrapper .accordion .item .title .toggle {
-  cursor: pointer;
-}
-.logement .bottom-container .drop-down-wrapper .accordion .item .title .rotate {
-  transform: rotate(0deg);
-  transition: transform 0.25s ease;
-}
-.logement .bottom-container .drop-down-wrapper .accordion .item .title .rotate-neg {
-  transform: rotate(180deg);
-  transition: transform 0.25s ease;
-}
-.logement .bottom-container .drop-down-wrapper .accordion .item .content {
-  transition: max-height 0.25s ease-out, padding 0.25s ease-out;
-  padding: 0 10px;
-  max-height: 0;
-  color: black;
-  background-color: #f6f6f6;
-  overflow: hidden;
-}
-.logement .bottom-container .drop-down-wrapper .accordion .item .content-show {
-  transition: max-height 0.25s ease-in, padding 0.25s ease-in;
-  overflow: auto;
-  max-height: 300px;
-  color: black;
-  background-color: #f6f6f6;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
+.logement .bottom-container .collapsed .item {
+  width: 50%;
 }
 
-.about .drop-down-wrapper .accordion {
+.collapsed {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
-.about .drop-down-wrapper .accordion .item {
+.collapsed .item {
   width: 90%;
   font-size: 22px;
 }
-.about .drop-down-wrapper .accordion .item .title {
+.collapsed .item .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -268,18 +231,18 @@ body {
   height: 52px;
   border-radius: 10px;
 }
-.about .drop-down-wrapper .accordion .item .title .toggle {
+.collapsed .item .title .toggle {
   cursor: pointer;
 }
-.about .drop-down-wrapper .accordion .item .title .rotate {
+.collapsed .item .title .rotate {
   transform: rotate(0deg);
   transition: transform 0.25s ease;
 }
-.about .drop-down-wrapper .accordion .item .title .rotate-neg {
+.collapsed .item .title .rotate-neg {
   transform: rotate(180deg);
   transition: transform 0.25s ease;
 }
-.about .drop-down-wrapper .accordion .item .content {
+.collapsed .item .content {
   transition: max-height 0.25s ease-out, padding 0.25s ease-out;
   padding: 0 10px;
   max-height: 0;
@@ -287,12 +250,22 @@ body {
   background-color: #f6f6f6;
   overflow: hidden;
 }
-.about .drop-down-wrapper .accordion .item .content-show {
+.collapsed .item .content-show {
   transition: max-height 0.25s ease-in, padding 0.25s ease-in;
   max-height: 300px;
   color: black;
   background-color: #f6f6f6;
-  padding: 10px;
+  padding: 20px;
+  height: 100%;
+}
+.collapsed .item ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.collapsed .item p {
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=index.css.map */
