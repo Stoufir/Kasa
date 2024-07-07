@@ -1,4 +1,4 @@
-import Banner from './Banner1'
+import Banner from './BannerHome'
 import Thumb from './Thumb'
 import Logements from '../logement.json'
 

@@ -3,7 +3,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import logements from '../logement.json';
 import Tags from './Tags';
 import StarRate from './StarRate';
-import Collapsed from './Collapsed';
+import Collapses from './Collapses';
 import Slider from './Slider';
 
 const findLogementID = (id) => {
@@ -45,7 +45,7 @@ function Logement() {
                 <StarRate rating={parseInt(logement.rating)} />
                 </div>
                 <div className='bottom-container'>
-                <Collapsed data={data} />
+                <Collapses data={data} />
                 </div>
       </div>
     </div>

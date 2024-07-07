@@ -11,6 +11,10 @@ body {
   justify-content: space-between;
   padding: 25px 0;
 }
+.header img {
+  height: 100%;
+  width: auto;
+}
 .header nav ul {
   display: flex;
   gap: 57px;
@@ -24,7 +28,7 @@ body {
   text-decoration-color: black;
 }
 .header nav a li {
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
   list-style: none;
   color: black;
@@ -134,7 +138,7 @@ body {
 
 .logement .carousel-root .logement-img {
   height: 415px;
-  width: 1240px;
+  width: 100%;
   object-fit: cover;
 }
 .logement .carousel-root .control-arrow {
@@ -266,6 +270,146 @@ body {
 .collapsed .item p {
   margin: 0;
   padding: 0;
+}
+
+@media only screen and (max-width: 376px) {
+  .header img {
+    width: 145;
+    height: 46px;
+  }
+  .header nav ul {
+    gap: 26px;
+  }
+  .header nav a li {
+    font-size: 12px;
+    text-wrap: nowrap;
+  }
+  .banner {
+    height: 111px;
+    width: 335px;
+  }
+  .banner .overlay p {
+    font-size: 24px;
+    padding: 15px;
+    text-wrap: wrap;
+  }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    align-items: center;
+  }
+  .gallery .thumb {
+    height: 255px;
+    width: 335px;
+  }
+  .collapsed {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .collapsed .item {
+    width: 100%;
+    font-size: 13px;
+  }
+  .collapsed .item .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ff6060;
+    color: white;
+    height: 30px;
+    border-radius: 10px;
+  }
+  .collapsed .item .title img {
+    height: 16px;
+    width: auto;
+  }
+  .logement {
+    display: flex;
+    flex-direction: column;
+  }
+  .logement .carousel-root .logement-img {
+    height: 415px;
+    width: 1240px;
+    object-fit: cover;
+  }
+  .logement .carousel-root .control-arrow {
+    color: red;
+    size: 100px;
+  }
+  .logement .up-container {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    color: #ff6060;
+    padding: 10px 0;
+  }
+  .logement .up-container .title-container .title {
+    font-size: 36px;
+    font-weight: 500;
+    margin: 15px 0 0 0;
+  }
+  .logement .up-container .title-container .location {
+    font-size: 18px;
+    margin: 10px 0 0 0;
+    color: black;
+  }
+  .logement .up-container .host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logement .up-container .host .name-container {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: right;
+  }
+  .logement .up-container .host .picture {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 64px;
+    height: 64px;
+  }
+  .logement .mid-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logement .mid-container .rate-container .star {
+    font-size: 24px;
+    color: #E3E3E3;
+  }
+  .logement .mid-container .rate-container .star.full {
+    color: #ff6060;
+  }
+  .logement .mid-container .tag-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+  }
+  .logement .mid-container .tag-container .tag {
+    background-color: #ff6060;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .logement .bottom-container .collapsed {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+  }
+  .logement .bottom-container .collapsed .item {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
