@@ -1,30 +1,32 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import logements from '../logement.json';
 import Tags from './Tags';
 import StarRate from './StarRate';
-import DropDown from './DropDown';
+import Collapses from './Collapses';
+import Slider from './Slider';
 
 const findLogementID = (id) => {
   return logements.find((logement) => logement.id === id);
 }
-
 function Logement() {
   const { id } = useParams();
   const logement = findLogementID(id);
+
+  if (!logement) {
+    return <Navigate to="/404"/>
+  }
+
   const pictures = logement.pictures;
   const [firstName, lastName] = logement.host.name.split(' ');
   const data = [
-    { question: 'Description', answer: logement.description}, 
-    { question: 'Équipements', answer: logement.equipments}
+    { id: 1, question: 'Description', answer: logement.description}, 
+    { id: 2, question: 'Équipements', answer: logement.equipments}
   ]
   return (
     <div>
-        <Header />
             <div className='logement'>
-                <img src={logement.pictures[0]} className='logement-img' alt={logement.pictures[0]?.title} />
+                <Slider logement={logement}/>
                 <div className='up-container'>
           <div className='title-container'>
             <div className='title'>{logement.title}</div>
@@ -43,10 +45,9 @@ function Logement() {
                 <StarRate rating={parseInt(logement.rating)} />
                 </div>
                 <div className='bottom-container'>
-                <DropDown data={data} />
+                <Collapses data={data} />
                 </div>
       </div>
-      <Footer />
     </div>
   );
 }

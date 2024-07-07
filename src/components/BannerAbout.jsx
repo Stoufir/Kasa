@@ -1,4 +1,4 @@
-import Img1 from '../Assets/Image2.png'
+import Img1 from '../Assets/Mountain_picture.png'
 
 function Banner() {
     return (
