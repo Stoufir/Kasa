@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    img {
+        height: 100%;
+        width: auto;
+    }
+    nav {
+        ul {
+            display: flex;
+            gap: 57px;
+        }
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            &.underline {
+                text-decoration: underline;
+                text-decoration-color: black;
+            }
+            li {
+                font-size: 24px;
+                cursor: pointer;
+                list-style: none;
+                color: black;
+                text-wrap: nowrap;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .header {
+        img {
+            width: 100%;
+            height: auto;
+        }
+        nav {
+            ul {
+                gap: 26px;
+            }
+            a {
+                li {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
