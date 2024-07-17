@@ -1,5 +1,3 @@
-
-
 .banner {
     position: relative;
     overflow: hidden;
@@ -32,16 +30,14 @@
     }
 }
 
-
 @media only screen and (max-width: 768px) {
     .banner {
         height: 111px;
-        width: 100%;
         .overlay {
             p {
                 font-size: 24px;
                 padding: 15px;
-                text-wrap: wrap;
+                word-wrap: break-word; /* Correction de la propriété non valide */
             }
         }
     }

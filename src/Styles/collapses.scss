@@ -1,5 +1,3 @@
-
-
 .collapsed {
     width: 100%;
     display: flex;
@@ -64,14 +62,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-    
     .collapsed {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    
         .item {
             font-size: 13px;
             .title {

@@ -32,123 +32,14 @@
             font-size: 18px;
         }
     }
+
     .up-container {
         display: flex;
         justify-content: space-between;
         color: $couleur-principale;
         padding: 10px 0;
+
         .left-container {
-            .title-container {
-            .title {
-                font-size: 36px;
-                font-weight: 500;
-                margin: 15px 0 0 0;
-            }
-            .location {
-                font-size: 18px;
-                margin: 10px 0 0 0;
-                color: black;
-            }
-            }
-            .tag-container {
-            display: flex;
-            margin: 10px 0px;
-            .tag {
-                background-color: $couleur-principale;
-                border-radius: 10px;
-                color: white;
-                padding: 10px;
-                margin: 5px;
-                font-size: 14px;
-                font-weight: 700;
-                text-align: center;
-            }
-            }
-        }
-        .right-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-        .host {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .name-container {
-                padding: 15px;
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                text-align: right;
-            }
-            .picture {
-                border-radius: 50%;
-                object-fit: cover;
-                width: 64px;
-                height: 64px;
-            }
-        }
-        .rate-container {
-            display: flex;
-            justify-content: space-between;
-            .star {
-                font-size: 24px;
-                color: #e3e3e3;
-            }
-
-            .star.full {
-                color: $couleur-principale;
-            }
-        }
-        }
-    }
-    .bottom-container {
-        .collapsed {
-            display: flex;
-            flex-direction: row;
-            align-items: start;
-            .item {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 768px) {
-
-    .logement {
-        .carousel-container {
-            position: relative;
-    
-            .logement-img {
-                height: 415px;
-                width: 100%;
-                object-fit: cover;
-            }
-            .left-arrow,
-            .right-arrow {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                background: none;
-                border: none;
-                cursor: pointer;
-            }
-
-            .counter {
-                position: absolute;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                color: white;
-                font-size: 18px;
-            }
-        }
-        .up-container {
-            display: flex;
-            justify-content: space-between;
-            color: $couleur-principale;
-            padding: 10px 0;
             .title-container {
                 .title {
                     font-size: 36px;
@@ -161,46 +52,12 @@
                     color: black;
                 }
             }
-            .host {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-    
-                .name-container {
-                    padding: 15px;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
-                    text-align: right;
-                }
-                .picture {
-                    border-radius: 50%;
-                    object-fit: cover;
-                    width: 64px;
-                    height: 64px;
-                }
-            }
-        }
-        .mid-container {
-            display: flex;
-            justify-content: space-between;
-            .rate-container {
-                .star {
-                    font-size: 24px;
-                    color: #e3e3e3;
-                }
-    
-                .star.full {
-                    color: $couleur-principale;
-                }
-            }
             .tag-container {
                 display: flex;
-                justify-content: space-between;
-                margin: 0 0 10px 0;
+                margin: 10px 0;
                 .tag {
                     background-color: $couleur-principale;
-                    border-radius: 20px;
+                    border-radius: 10px;
                     color: white;
                     padding: 10px;
                     margin: 5px;
@@ -210,66 +67,17 @@
                 }
             }
         }
-        .bottom-container {
-            .collapsed {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    }
 
-}
-
-@media only screen and (max-width: 500px) {
-    
-
-
-    .logement {
-        .carousel-container {
-            .logement-img {
-                height: 335px;
-                width: 100%;
-                object-fit: cover;
-            }
-            .counter {
-                display: none;
-            }
-        }
-        .up-container {
+        .right-container {
             display: flex;
             flex-direction: column;
-            .left-container {
-                .title-container {
-                .title {
-                    font-size: 18px;
-                    font-weight: 500;
-                    margin: 15px 0 0 0;
-                }
-                .location {
-                    font-size: 14px;
-                    margin: 10px 0 0 0;
-                    color: black;
-                }
-                }
-                .tag-container {
-                display: flex;
-                margin: 10px 0px;
-                .tag {
-                    padding: 5px 10px;
-                    margin: 5px;
-                    font-size: 10px;
-                }
-                }
-            }
-            .right-container {
-                display: flex;
-                flex-direction: row-reverse;
-                justify-content: space-between;
-                align-items: center;
+            justify-content: space-around;
+
             .host {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
                 .name-container {
                     padding: 15px;
                     display: flex;
@@ -287,30 +95,134 @@
             .rate-container {
                 display: flex;
                 justify-content: space-between;
+
                 .star {
                     font-size: 24px;
                     color: #e3e3e3;
                 }
-    
+
                 .star.full {
                     color: $couleur-principale;
-                }
-            }
-            }
-        }
-        .bottom-container {
-            .collapsed {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .item {
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
                 }
             }
         }
     }
 
+    .bottom-container {
+        .collapsed {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+
+            .item {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
 }
 
+@media only screen and (max-width: 768px) {
+    .logement {
+        .carousel-container {
+            .logement-img {
+                height: 415px;
+            }
+        }
+        .up-container {
+            .left-container {
+                .title-container {
+                    .title {
+                        font-size: 36px;
+                    }
+                    .location {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .right-container {
+                .host {
+                    .name-container {
+                        padding: 15px;
+                    }
+                    .picture {
+                        width: 64px;
+                        height: 64px;
+                    }
+                }
+            }
+        }
+        .bottom-container {
+            .collapsed {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .logement {
+        .carousel-container {
+            .logement-img {
+                height: 335px;
+            }
+            .counter {
+                display: none;
+            }
+        }
+        .up-container {
+            flex-direction: column;
+
+            .left-container {
+                .title-container {
+                    .title {
+                        font-size: 18px;
+                    }
+                    .location {
+                        font-size: 14px;
+                    }
+                }
+                .tag-container {
+                    .tag {
+                        padding: 5px 10px;
+                        font-size: 10px;
+                    }
+                }
+            }
+            .right-container {
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: space-between;
+
+                .host {
+                    .name-container {
+                        padding: 15px;
+                    }
+                    .picture {
+                        width: 64px;
+                        height: 64px;
+                    }
+                }
+                .rate-container {
+                    .star {
+                        font-size: 24px;
+                    }
+                    .star.full {
+                        color: $couleur-principale;
+                    }
+                }
+            }
+        }
+        .bottom-container {
+            .collapsed {
+                flex-direction: column;
+                align-items: center;
+
+                .item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
