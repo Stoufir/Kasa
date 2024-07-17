@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Arrow from '../Assets/Arrow.png'
+import Arrow from '../assets/Arrow-down.png'
 
 
 function Collapsed({data}) {

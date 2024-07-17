@@ -1,12 +1,12 @@
 import { NavLink } from 'react-router-dom'
-import Logo from '../Assets/Logo_Kosa_Desktop.png'
+import Logo from '../assets/Logo_Kasa_Desktop.png'
 
 
 
 function Header() {
     return (
         <header className='header'>
-            <img src={Logo} alt="Logo Kasa"></img>
+            <NavLink to ="/"><img src={Logo} alt="Logo Kasa" ></img></NavLink>
             <nav className='navigation'>
                 <ul>
                 <NavLink to ="/" className={({isActive}) => (isActive ? "underline" : "")} >

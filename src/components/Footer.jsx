@@ -1,4 +1,4 @@
-import Logo from '../Assets/Logo_White_Kasa_Desktop.png'
+import Logo from '../assets/Logo_White_Kasa_Desktop.png'
 
 function Footer() {
     return (
