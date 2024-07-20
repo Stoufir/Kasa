@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './Home'
-import NotFound from './NotFound'
-import Logement from './Logement'
-import About from './About'
-import Header from './Header'
-import Footer from './Footer'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
+import Logement from './pages/Logement'
+import About from './pages/About'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 function Router () { return (
   <BrowserRouter>
