@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import logements from '../logement.json';
-import Tags from './Tags';
-import StarRate from './StarRate';
-import Collapses from './Collapses';
-import Slider from './Slider';
+import Tags from '../components/Tags';
+import StarRate from '../components/StarRate';
+import Collapses from '../components/Collapses';
+import Slider from '../components/Slider';
 
 const findLogementID = (id) => {
   return logements.find((logement) => logement.id === id);
